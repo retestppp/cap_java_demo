@@ -1,0 +1,40 @@
+
+---
+spring:
+  config.activate.on-profile: default
+  sql.init.schema-locations: classpath:schema-h2.sql
+  datasource:
+    url: jdbc:postgresql://172.20.3.38:5432/cms_dev_java
+    username: postgres
+    password: postgres!@
+    driver-class-name: org.postgresql.Driver
+
+  security:
+    user:
+      name: user
+      password: pass
+    basic:
+      enabled: false  # 또는 true + username/password 설정
+  main:
+    allow-bean-definition-overriding: true
+
+cds:
+  data-source.auto-config.enabled: false
+---
+management:
+  endpoint:
+    health:
+      show-components: always
+      probes:
+        enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health
+  health:
+    defaults:
+      enabled: false
+    ping:
+      enabled: true
+    db:
+      enabled: true

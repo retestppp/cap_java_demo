@@ -1,0 +1,26 @@
+{
+    "sql": {
+        "native_hana_associations" : false
+    },
+    "build": {
+        "target": "gen",
+        "tasks": [
+            {
+                "for": "java",
+                "src": "srv",
+                "options": {
+                    "model": ["db", "srv"]
+                }
+            }
+        ]
+    },
+    "requires": {
+        "db": {
+            "kind": "sql"
+        }
+    },
+    "odata": {
+        "version": "v4"
+    },
+    "model": ["db", "srv"]
+}
