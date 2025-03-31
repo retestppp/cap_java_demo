@@ -1,4 +1,4 @@
-using {com.dkbmc.demo as dm} from '../db/schema';
+using {com.dkbmc.demo as dm} from '../../../../db/schema';
 
 // 관리자 계정 서비스
 service AdminAccountService @(path: '/adminAccount') {

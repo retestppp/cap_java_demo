@@ -1,4 +1,4 @@
-using {com.dkbmc.demo as dm} from '../db/schema';
+using {com.dkbmc.demo as dm} from '../../../../db/schema';
 
 // 교육 과정 및 단원 서비스
 service CurriculumService @(path: '/curriculum') {

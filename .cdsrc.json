@@ -9,7 +9,7 @@
                 "for": "java",
                 "src": "srv",
                 "options": {
-                    "model": ["db", "srv"]
+                    "model": ["db", "srv",  "srv/src/main/cds"]
                 }
             }
         ]
@@ -22,5 +22,5 @@
     "odata": {
         "version": "v4"
     },
-    "model": ["db", "srv"]
+    "model": ["db", "srv",  "srv/src/main/cds"]
 }
