@@ -94,21 +94,17 @@
 		<finalName>${project.artifactId}</finalName>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
-				<version>3.3.1</version>
 				<executions>
 					<execution>
 						<id>copy-csn</id>
-						<phase>process-resources</phase>
-						<goals>
-							<goal>copy-resources</goal>
-						</goals>
+						<phase>generate-resources</phase>
+						<goals><goal>copy-resources</goal></goals>
 						<configuration>
-							<outputDirectory>${project.basedir}/src/main/resources/edmx</outputDirectory>
+							<outputDirectory>${project.build.outputDirectory}/edmx</outputDirectory>
 							<resources>
 								<resource>
-									<directory>${project.basedir}/../gen/srv/src/main/resources/edmx</directory>
+									<directory>../gen/srv/src/main/resources/edmx</directory>
 									<includes>
 										<include>csn.json</include>
 									</includes>

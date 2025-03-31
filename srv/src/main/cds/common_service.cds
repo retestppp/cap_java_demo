@@ -1,4 +1,4 @@
-using {com.dkbmc.demo as dm} from '../db/schema';
+using {com.dkbmc.demo as dm} from '../../../../db/schema';
 
 service commonCode @(path: '/common-code') {
     entity commonCode as projection on dm.common_code

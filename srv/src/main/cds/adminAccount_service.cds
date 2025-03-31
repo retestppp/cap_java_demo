@@ -1,4 +1,4 @@
-using {com.dkbmc.demo as dm} from '../db/schema';
+using {com.dkbmc.demo as dm} from '../../../../db/schema';
 
 // 관리자 계정 서비스
 service AdminAccountService @(path: '/adminAccount') {
@@ -23,7 +23,7 @@ service AdminAccountService @(path: '/adminAccount') {
                               account_name : String,
                               account_type : String,
                               account_email : String,
-                              account_phone : String, )               returns String;
+                              account_phone : String )               returns String;
 
     // 현재 사용자의 계정 정보를 업데이트하는 이벤트 핸들러
     action AdminAccountUpdateNoToken(account_idx : UUID,

@@ -20,6 +20,9 @@ spring:
 
 cds:
   data-source.auto-config.enabled: false
+  model:
+    paths:
+      - classpath:/edmx
 ---
 management:
   endpoint:
