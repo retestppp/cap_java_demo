@@ -23,6 +23,9 @@ cds:
   model:
     paths:
       - classpath:/edmx
+  odata-v4:
+    services:
+      - name: AccountService
 ---
 management:
   endpoint:

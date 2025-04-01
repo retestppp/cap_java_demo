@@ -106,7 +106,8 @@
 								<resource>
 									<directory>../gen/srv/src/main/resources/edmx</directory>
 									<includes>
-										<include>csn.json</include>
+										<include>**/*.xml</include>
+										<include>**/*.json</include>
 									</includes>
 								</resource>
 							</resources>
